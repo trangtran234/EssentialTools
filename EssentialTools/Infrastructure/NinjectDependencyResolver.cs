@@ -21,6 +21,7 @@ namespace EssentialTools.Infrastructure
         private void AddBlindings()
         {
             kernel.Bind<IValueCalculator>().To<LinqValueCalculator>();
+            kernel.Bind<IDiscountHelper>().To<DefaultDiscountHelper>().WithPropertyValue("DiscountSize", 50M);
         }
 
         public object GetService(Type serviceType)
