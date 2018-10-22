@@ -13,6 +13,7 @@ namespace EssentialTools.Models
     public class DefaultDiscountHelper : IDiscountHelper
     {
         public decimal discountSize;
+
         public DefaultDiscountHelper(decimal discountParam)
         {
             discountSize = discountParam;
